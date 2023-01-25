@@ -1,0 +1,141 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-right: 65px;
+    justify-content: flex-end;
+    font-family: 'Noto Sans Adlam', sans-serif;
+    margin-top: 50px;
+    font-weight:100;
+    position: relative;
+    height: 10vh;
+}
+
+h3 {
+    /* transition: .5s; */
+    /* padding:17px; */
+    color: #BB9F06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    /* background: #29353E; */
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border-radius: 50%;
+    transition: all 400ms ease-in-out;
+}
+
+h3:hover {
+    cursor: pointer;
+    /* border: solid 1px; */
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+    font-size: 20px;
+    letter-spacing: 2px; 
+    /* background: #AA602F; */
+    color: white;
+    transition: all 400ms ease-in-out;
+}
+
+h3:hover::before, h3:hover::after {
+    transition: all 400ms ease-in-out;
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #F15156;
+    /* opacity: .5; */
+    border-radius: 50%;
+    z-index: -1;
+    animation: 2s clockwise infinite;
+  }
+  
+  h3:hover:after {
+    transition: all 400ms ease-in-out;
+    background: #D49987;
+    opacity: .5;
+    animation: 3s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
